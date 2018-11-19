@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Posts
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'web/css/content.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid post">
+        <h1>This is a Rango Post!</h1>
+        <p>{{ post_content }}</p>
+    </div>
+{% endblock %}
