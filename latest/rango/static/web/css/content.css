@@ -23,8 +23,15 @@
 .post {
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
 }
 
 html {
     background-color: rgb(58, 53, 53);
+}
+
+body {
+    padding-bottom: 40px;
 }
