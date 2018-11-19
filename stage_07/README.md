@@ -1,4 +1,4 @@
-## stage_06
+## stage_07
 -----
 Maybe we should also include the ability to like a post, display its number of likes, and reorder posts by the number of likes they've received?That's what this stage does!
 
