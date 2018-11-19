@@ -29,6 +29,14 @@ def posts(request, post_type):
 
     return render(request, 'posts.html', context=context)
 
+def favorites(request):
+    context = dict()
+
+    # grab all of the favorite objects from our database
+    context['favorites'] = Favorite.objects.all()
+
+    return render(request, 'favorites.html', context=context)
+
 def add_favorite(request, quote):
     try: 
         if request.method == 'GET':
