@@ -1,0 +1,3 @@
+## stage_00
+-----
+This is the very first stage. It represents an initial install and project with Django, with no configuration complete. If you run ```waitress-serve rango.wsgi:application``` or set the environment variable ```PORT``` to your favorite port number and then run ```sh run.sh``` you will be able to run this first stage locally on your computer. However, this assumes that you have installed the requirements with ```pip install -r requirements.txt```. Once those are installed, the above two versions of the same command should work just fine, and you should see some form of "Congratulations" when you go to ```127.0.0.1:YOURPORT``` in your web browser of choice. 
