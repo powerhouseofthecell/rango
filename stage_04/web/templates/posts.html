@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Posts
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'web/css/content.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% for post in posts %}
+        <div class="container-fluid post">
+            <h1>This is Rango Post #{{ forloop.counter }}!</h1>
+            <p>{{ post }}</p>
+        </div>
+        <hr class="mb-4 mt-3">
+    {% endfor %}
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'web/js/pretty_titles.js' %}"></script>
+{% endblock %}
