@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_waitress',
+    'rango',
 ]
 
 MIDDLEWARE = [
@@ -120,10 +121,10 @@ USE_TZ = True
 # THE BELOW IS NOT SUITABLE FOR PRODUCTION - THERE ARE MANY WAYS TO EASILY ADAPT THIS FOR PRODUCTION THOUGH
 # SEE THE ABOVE URL FOR DETAILS
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'latest')
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 STATIC_DIRS = [
-    os.path.join(STATIC_ROOT, 'static')
+    os.path.join(PROJECT_ROOT, 'static')
 ]
