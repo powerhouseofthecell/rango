@@ -1,3 +1,4 @@
 Django==2.1.3
+django-waitress==0.1.0
 pytz==2018.7
 waitress==1.1.0
