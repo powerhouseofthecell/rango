@@ -20,10 +20,6 @@
     border-radius: 20px;
 }
 
-.post > h1 {
-    border: 1px black solid;
-}
-
 .post {
     padding-top: 20px;
     padding-bottom: 20px;
