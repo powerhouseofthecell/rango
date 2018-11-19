@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'web/css/content.css' %}">
+{% endblock %}
+
+{% block title %}
+    Favorites
+{% endblock %}
+
+{% block body %}
+    {% for favorite in favorites %}
+        <div class="container-fluid post">
+            <h1>Favorite #{{ forloop.counter }}!</h1>
+            <p id="post-{{ forloop.counter }}">{{ favorite.body }}</p>
+        </div>
+        <hr class="mb-4 mt-3">
+    {% endfor %}
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'web/js/favorite_titles.js' %}"></script>
+{% endblock %}
