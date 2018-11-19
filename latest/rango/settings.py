@@ -25,7 +25,7 @@ SECRET_KEY = 'zm^g(@5!cthaa()m79h5ubtw3bqzl50-h^_84*4uww6an^vjhb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'rango.herokuapp.com']
 
 
 # Application definition
@@ -116,5 +116,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
+# THE BELOW IS NOT SUITABLE FOR PRODUCTION - THERE ARE MANY WAYS TO EASILY ADAPT THIS FOR PRODUCTION THOUGH
+# SEE THE ABOVE URL FOR DETAILS
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'static'),
+)
