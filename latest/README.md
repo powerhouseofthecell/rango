@@ -1,11 +1,12 @@
 ## stage_06
 -----
-Oops! We've been favoriting all these quotes, but we still haven't actually displayed them to the user. Let's add a new favorites page using all that we know about templates and URLs in Django, and then we're going to access the models we have and display these favorites to the user! (Some cute Javascript included for free!)
+Maybe we should also include the ability to like a post, display its number of likes, and reorder posts by the number of likes they've received?That's what this stage does!
 
 -----
 #### Steps Taken
-1. Add a new template to our ```web/templates/``` called ```favorites.html``` --> ```web/templates/favorites.html```
-2. Modify this template to allow us to print out all the favorited posts (very similar to the posts template)
-3. Add a favorites view to ```web/views.py```
-4. Add a corresponding URL to ```web/urls.py``` so that we can get to that view. 
-5. Update ```rango/templates/base.html``` to reflect the addition of this new url (a la navbar)
+1. Add a like button, and the corresponding AJAX in a Javascript file. But only add the like button on the favorites page.
+2. Modify the ```web/urls.py``` to accept a new url with a Favorite object's ID as a parameter
+3. Modify ```web/views.py``` to then handle this new url.
+4. Modify ```web/models.py``` to add a likes field to our Favorite objects
+5. Modify our favorites view in ```web/views.py``` in order to make sure that favorites are actually displayed by number of likes. 
+6. Finally, display the number of likes next to the favorite (where should we modify for this?)

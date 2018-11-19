@@ -33,9 +33,26 @@ def favorites(request):
     context = dict()
 
     # grab all of the favorite objects from our database
-    context['favorites'] = Favorite.objects.all()
+    context['favorites'] = Favorite.objects.all().order_by('-likes')
 
     return render(request, 'favorites.html', context=context)
+
+def like_favorite(request, id):
+    try: 
+        if request.method == 'GET':
+            liked_fav = Favorite.objects.filter(id=id)
+            
+            if not liked_fav:
+                raise NotImplementedError
+            else:
+                liked_fav[0].likes += 1
+                liked_fav[0].save(update_fields=['likes'])
+    
+            return JsonResponse({'data': True})
+        else:
+            return JsonResponse({'data': False})
+    except:
+        return JsonResponse({'data': False})
 
 def add_favorite(request, quote):
     try: 
