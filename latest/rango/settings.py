@@ -25,7 +25,7 @@ SECRET_KEY = 'zm^g(@5!cthaa()m79h5ubtw3bqzl50-h^_84*4uww6an^vjhb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'rango.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'rangodjango.herokuapp.com']
 
 
 # Application definition
