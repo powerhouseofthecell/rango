@@ -9,12 +9,26 @@
     align-items: center;
 }
 
-.post > h1 {
-    padding-top: 40px;
-}
-
 .post > p, .post > h1 {
     text-align: center;
     align-content: center;
     align-items: center;
+}
+
+.post > p {
+    border: 1px blue solid;
+    border-radius: 20px;
+}
+
+.post > h1 {
+    border: 1px black solid;
+}
+
+.post {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+html {
+    background-color: rgb(58, 53, 53);
 }
