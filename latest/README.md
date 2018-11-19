@@ -1,12 +1,12 @@
-## stage_02
+## stage_03
 -----
-Finally, we get to write a little bit of HTML! We've introduced some templating syntax, and we've made our URLs a bit more interesting. We have also started the process of creating some interesting posts in our rango blog. We introduce some basic Bootstrap, but since that's not the main point of the tutorial, we won't talk about it very much (they have fantastic documentation online).
+We've cleaned up and modularized our code a bit more in this stage. We've started including our own custom css files, and we're using more of Django's builtin templating engine's features, such as template extension, to make our code cleaner. We're also using a few more bootstrap features to make everything pretty. 
 
 -----
 #### Steps Taken
-1. Added the web app to our INSTALLED_APPS in ```rango/settings.py```
-2. Created a templates directory in ```web``` --> ```web/templates/``` and then added ```index.html``` to it (stylized with Bootstrap)
-3. Added another template called ```posts.html``` to our templates directory, and stylized it with Bootstrap. We also introduced the use of the templating engine language in order to render some content brought in from the view (the double "{{" syntax). 
-4. Added a view in ```web/views.py``` that allowed us to render this new template, with some hardcoded Lorem Ipsum content.
-5. Added the corresponding URL path to allow us as the user to actually access this new template in ```web/urls.py```
-6. Followed similar steps to those in previous stages in order to run the actual app and view our work. 
+1. Added a templates directory to the rango directory --> ```rango/templates/```
+2. Added ```base.html``` to this new directory --> ```rango/templates/base.html```
+3. Extracted common features from ```index.html``` and ```posts.html``` and put these into the new ```base.html``` and then extended this base template to make our new templates much cleaner.
+4. Added the use of custom static files to help us customize things a bit more (i.e. writing our own css files)
+5. Added a navbar for ease of use.
+6. Used the same steps as before in order to run the server and look at our glory.
