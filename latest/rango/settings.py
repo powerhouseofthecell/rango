@@ -121,7 +121,7 @@ USE_TZ = True
 # THE BELOW IS NOT SUITABLE FOR PRODUCTION - THERE ARE MANY WAYS TO EASILY ADAPT THIS FOR PRODUCTION THOUGH
 # SEE THE ABOVE URL FOR DETAILS
 
-PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'latest')
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
