@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_waitress',
     'rango',
+    'web'
 ]
 
 MIDDLEWARE = [
