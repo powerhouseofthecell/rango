@@ -18,7 +18,7 @@ from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 
-import rango.web.urls as web_urls
+import web.urls as web_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
